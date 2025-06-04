@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                KC_SCLN,    KC_Q,    KC_J,    KC_K,    KC_X,                         KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT, KC_LCTL, MO(NAV),    MO(SYM),  KC_SPC, KC_RSFT
+                                   LSFT_T(KC_ESC), KC_LCTL, MO(NAV),    MO(SYM),  KC_SPC, KC_RSFT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -97,10 +97,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // clang-format on
 
-const uint16_t PROGMEM ht_combo[]   = {KC_H, KC_T, COMBO_END};
-combo_t                key_combos[] = {
-    COMBO(ht_combo, KC_ESC),
-};
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LSFT_T(KC_ESC):
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}
 
 bool sw_win_active  = false;
 bool sw_lang_active = false;

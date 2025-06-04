@@ -34,3 +34,5 @@
 
 /* 4MB memory (not default) */
 #define EXTERNAL_FLASH_SIZE (4 * 1024 * 1024)
+
+#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
