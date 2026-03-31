@@ -11,13 +11,7 @@
         "split_count": [29, 29],
         "driver": "ws2812"
     },
-    "matrix_pins": {
-        "cols": ["GP27", "GP28", "GP21", "GP6", "GP7", "GP8"],
-        "rows": ["GP29", "GP26", "GP5", "GP4", "GP9"]
-    },
-    "diode_direction": "ROW2COL",
     "split": {
-        "soft_serial_pin": "GP1",
         "bootmagic": {
             "matrix": [5, 0]
         }
@@ -28,10 +22,6 @@
         "extrakey": true,
         "rgb_matrix": true,
         "pointing_device": true
-    },
-    "ws2812": {
-        "pin": "GP0",
-        "driver": "vendor"
     },
     "processor": "RP2040",
     "bootloader": "rp2040",
