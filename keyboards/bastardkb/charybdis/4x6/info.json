@@ -1,11 +1,9 @@
 {
     "keyboard_name": "Charybdis (4x6) Splinky",
-    "manufacturer": "Bastard Keyboards",
     "url": "https://bastardkb.com/charybdis",
     "usb": {
         "device_version": "2.0.0",
-        "pid": "0x1833",
-        "vid": "0xA8F8"
+        "pid": "0x1833"
     },
     "rgb_matrix": {
         "split_count": [29, 29],

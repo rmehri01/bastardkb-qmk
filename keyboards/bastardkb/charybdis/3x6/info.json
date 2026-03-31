@@ -1,11 +1,8 @@
 {
     "keyboard_name": "Charybdis Mini (3x6) Splinky",
-    "manufacturer": "Bastard Keyboards",
-    "url": "https://bastardkb.com",
     "usb": {
         "device_version": "2.0.0",
-        "pid": "0x1834",
-        "vid": "0xA8F8"
+        "pid": "0x1834"
     },
     "rgb_matrix": {
         "driver": "ws2812",
