@@ -4,8 +4,7 @@
     "manufacturer": "Bastard Keyboards",
     "usb": {
         "device_version": "2.0.0",
-        "pid": "0x1828",
-        "vid": "0xA8F8"
+        "pid": "0x1828"
     },
     "rgb_matrix": {
         "driver": "ws2812",
