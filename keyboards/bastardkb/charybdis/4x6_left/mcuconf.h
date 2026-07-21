@@ -1,6 +1,5 @@
 /*
- * Copyright 2021 Quentin LEBASTARD <qlebastard@gmail.com>
- * Copyright 2021 Charly Delay <charly@codesink.dev> (@0xcharly)
+ * Copyright 2022 Charly Delay <charly@codesink.dev> (@0xcharly)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,23 +17,7 @@
 
 #pragma once
 
-/* Pointing device configuration. */
+#include_next <mcuconf.h>
 
-// Enable use of pointing device on slave split.
-#define SPLIT_POINTING_ENABLE
-
-// Pointing device is on the right split.
-#define POINTING_DEVICE_RIGHT
-
-// Limits the frequency that the sensor is polled for motion.
-#define POINTING_DEVICE_TASK_THROTTLE_MS 1
-
-// Invert X axis on mouse reports.
-#define POINTING_DEVICE_INVERT_X
-
-// Managed by Argos, disabled by default
-#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-
-
-#undef POINTING_DEVICE_RIGHT
-#define POINTING_DEVICE_LEFT
+#undef RP_SPI_USE_SPI0
+#define RP_SPI_USE_SPI0 TRUE
