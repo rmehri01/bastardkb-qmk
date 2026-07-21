@@ -34,7 +34,3 @@
 
 // Managed by Argos, disabled by default
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-
-
-#undef POINTING_DEVICE_RIGHT
-#define POINTING_DEVICE_LEFT
